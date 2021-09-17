@@ -3,17 +3,17 @@
  * @author roudet
  */
 
-public class Poire {
+public class Orange {
     private double prix;
     private String origine;
 	
-    public Poire() 
+    public Orange() 
     {
         this.prix = 0.5;  //prix en euros
         this.origine="Espagne";
     }
     
-    public Poire(double prix, String origine) 
+    public Orange(double prix, String origine) 
     {
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
@@ -44,31 +44,31 @@ public class Poire {
 
     @Override
     public String toString(){
-        return "Poire de " + origine + " a " + prix + " euros";
+        return "Orange de " + origine + " a " + prix + " euros";
     }
 
     @Override
-    public boolean equals(Object o){  //predicat pour tester si 2 Poires sont equivalentes
+    public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
         if(o != null && getClass() == o.getClass()){
-            Poire or = (Poire) o;
+            Orange or = (Orange) o;
             return (prix == or.prix && origine.equals(or.origine));
         }
         return false;
     }
 
-    public boolean isSeedless() {  //predicat indiquant qu'une Poire a des pepins
-        return true;
+    public boolean isSeedless() {  //predicat indiquant qu'une orange a des pepins
+        return false;
     }
 
 
     public static void main (String[] args){
         //Ecrire ici vos tests
-	System.out.println("premier test Poire");
-	Poire p;
-	Poire p1;
-	p= new Poire();
-	p1 = new Poire(15, "chine");
-	System.out.println(p.toString());
-	System.out.println(p1.toString());
+	System.out.println("premier test Orange");
+	Orange o;
+	Orange o1;
+	o= new Orange();
+	o1 = new Orange(15, "chine");
+	System.out.println(o.toString());
+	System.out.println(o1.toString());
    }
 }
